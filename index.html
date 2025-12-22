@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GA Cyber Tutor | Master Cybersecurity</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --dark:#020617;
+  --dark2:#0b1120;
+  --yellow:#facc15;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --card:#0f172a;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:var(--dark);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{
+  width:90%;
+  max-width:1150px;
+  margin:auto;
+}
+
+/* NAV */
+nav{
+  padding:20px 0;
+  border-bottom:1px solid #1e293b;
+}
+
+.nav-flex{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:700;
+}
+.logo span{ color:var(--yellow); }
+
+.btn{
+  padding:12px 22px;
+  border-radius:6px;
+  background:var(--yellow);
+  color:#020617;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  background:
+    linear-gradient(to right, #020617ee, #020617aa),
+    url("https://images.unsplash.com/photo-1555949963-aa79dcee981c") center/cover;
+  padding:120px 0;
+}
+
+.hero h1{
+  font-size:44px;
+  max-width:700px;
+}
+.hero h1 span{ color:var(--yellow); }
+
+.hero p{
+  margin:20px 0 35px;
+  max-width:600px;
+  color:var(--muted);
+}
+
+/* SECTION BASE */
+section{
+  padding:90px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-title h2{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.section-title span{
+  display:inline-block;
+  width:70px;
+  height:4px;
+  background:var(--yellow);
+  border-radius:10px;
+}
+
+/* ABOUT */
+.about{
+  background:var(--dark2);
+}
+
+.about-box{
+  background:var(--card);
+  padding:50px;
+  border-radius:16px;
+  border:1px solid #1e293b;
+  max-width:900px;
+  margin:auto;
+  text-align : center;
+}
+
+.about-box p{
+  color:#ffffff;
+  margin-bottom:16px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  padding:35px;
+  border-radius:14px;
+  border:1px solid #1e293b;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:var(--yellow);
+}
+
+.card h3{
+  margin-bottom:12px;
+  color:var(--yellow);
+}
+
+/* PROGRAMS */
+.programs{
+  background:var(--dark2);
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  background:linear-gradient(135deg,#020617,#0b1120);
+}
+
+.cta h2{
+  font-size:36px;
+}
+.cta p{
+  max-width:650px;
+  margin:18px auto 35px;
+  color:var(--muted);
+}
+
+/* FOOTER */
+footer{
+  padding:30px 0;
+  text-align:center;
+  border-top:1px solid #1e293b;
+  color:var(--muted);
+  font-size:14px;
+}
+/* =========================
+   FULL RESPONSIVE ENHANCEMENTS
+   (No existing code modified)
+   ========================= */
+
+/* Prevent horizontal overflow on small devices */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Make buttons and text easier to tap on mobile */
+@media (max-width: 600px) {
+  .btn {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
+
+/* Navigation responsiveness */
+@media (max-width: 768px) {
+  .nav-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+}
+
+/* Hero section spacing and text scaling */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    padding: 0 10px;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .container {
+    width: 92%;
+  }
+}
+
+/* Mobile-first layout tightening */
+@media (max-width: 480px) {
+  section {
+    padding: 50px 0;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  footer p {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+}
+
+/* Grid stability on very small screens */
+@media (max-width: 360px) {
+  .about-grid,
+  .products-grid {
+    gap: 20px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-flex">
+    <div class="logo">GA <span>Cyber Tutor</span></div>
+    <div>
+      <!--<a href="#programs" class="btn">Explore Programs</a> -->
+      <a href="foundernote.html" target="_blank" class="btn" style="margin-left:10px;">Founder’s Note</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Master <span>CYBERSECURITY</span> Skills & Transform Your Career</h1>
+    <p>
+      Industry-focused cybersecurity education built to make you job-ready.
+      Learn, certify, and grow — 100% online.
+    </p>
+    <a href="#about" class="btn">Start Your Journey</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>About GA Cyber Tutor</h2>
+      <span></span>
+    </div>
+
+    <div class="about-box">
+      <p><strong>GA Cyber Tutor</strong> believes education has the power to transform lives.</p>
+      <p>
+        Founded in 2023, GA Tutor bridges the gap between traditional college education
+        and real-world industry needs.
+      </p>
+      <p>
+        We deliver affordable, high-quality training focused on
+        job-ready cybersecurity skills.
+      </p>
+      <p>At GA Cyber Tutor we don't just teach we transform careers! Our Industry Certified Training are crafted to equip you with the exact skills companies are hunting for.</p>
+      <p>Whether you're a beginner or aiming to become an expert, our programs are designed to take you from the basics to mastery.</p>
+      <p>Learn job-ready skills, earn your certifications, and build a powerful career — 100% online, anytime, anywhere.</p>
+      <p><strong>YOUR JOURNEY TOWARDS SUCCESS STARTS RIGHT HERE, RIGHT NOW!</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Why GA Cyber Tutor?</h2>
+      <span></span>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Industry-Certified Learning</h3>
+        <p>Courses designed around the exact skills companies demand.</p>
+      </div>
+      <div class="card">
+        <h3>Beginner to Expert</h3>
+        <p>Structured learning paths that take you from basics to mastery.</p>
+      </div>
+      <div class="card">
+        <h3>Career Transformation</h3>
+        <p>We don’t just teach — we transform careers through hands-on training.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="programs" id="programs">
+  <div class="container">
+    <div class="section-title">
+      <h2>What You’ll Learn</h2>
+      <span></span>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Cybersecurity Fundamentals</h3>
+        <p>Security concepts, networking, and threat analysis.</p>
+      </div>
+      <div class="card">
+        <h3>Ethical Hacking & Pentesting</h3>
+        <p>Understand attacker mindset and defense strategies.</p>
+      </div>
+      <div class="card">
+        <h3>Tools & Certifications</h3>
+        <p>Hands-on learning with industry-recognized certifications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Your Journey Starts Right Here, Right Now</h2>
+    <p>
+      Learn job-ready cybersecurity skills, earn certifications,
+      and build a powerful future — anytime, anywhere.
+    </p>
+    <a href="courses.html" class="btn">Our Programs</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>
+      <a href="privacy-policy.html" target="_blank" style="color:#facc15; text-decoration:none;">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="terms-of-use.html" target="_blank" style="color:#facc15; text-decoration:none;">Terms of Use</a>
+      &nbsp;|&nbsp;
+      <a href="refund-policy.html" target="_blank" style="color:#facc15; text-decoration:none;">Refund Policy</a>
+    </p>
+    <p style="margin-top:10px; color:#94a3b8;">
+      © 2025 GA Tutor. A GA Tech Innovators Company
+    </p>
+  </div>
+</footer>
+
+
+</body>
+</html>
