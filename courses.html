@@ -58,6 +58,7 @@ nav{
   text-decoration:none;
   font-weight:600;
   cursor:pointer;
+  border:none;
 }
 
 /* HEADER */
@@ -99,15 +100,6 @@ section{padding:80px 0;}
 }
 .card h3{color:var(--yellow);}
 .card p{color:var(--muted);margin:15px 0;}
-.badge{
-  display:inline-block;
-  background:#020617;
-  color:var(--yellow);
-  padding:6px 14px;
-  border-radius:20px;
-  font-size:13px;
-  border:1px solid #1e293b;
-}
 
 /* POPUP */
 #popup{display:none;}
@@ -160,6 +152,85 @@ footer{
   font-size:14px;
 }
 footer a{color:var(--yellow);text-decoration:none;}
+/* =========================
+   FULL RESPONSIVE ENHANCEMENTS
+   (No existing code modified)
+   ========================= */
+
+/* Prevent horizontal overflow on small devices */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Make buttons and text easier to tap on mobile */
+@media (max-width: 600px) {
+  .btn {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
+
+/* Navigation responsiveness */
+@media (max-width: 768px) {
+  .nav-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+}
+
+/* Hero section spacing and text scaling */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    padding: 0 10px;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .container {
+    width: 92%;
+  }
+}
+
+/* Mobile-first layout tightening */
+@media (max-width: 480px) {
+  section {
+    padding: 50px 0;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  footer p {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+}
+
+/* Grid stability on very small screens */
+@media (max-width: 360px) {
+  .about-grid,
+  .products-grid {
+    gap: 20px;
+  }
+}
 </style>
 </head>
 
@@ -179,28 +250,11 @@ footer a{color:var(--yellow);text-decoration:none;}
 
 <section>
   <div class="container grid">
-
     <div class="card">
-      
-      <h3>Ethical Hacking</h3>
+      <h3>3 Day Live Ethical Hacking</h3>
       <p>Hands-on hacking, attacks, AI security, legal & career roadmap.</p>
       <button class="btn" onclick="openPopup('ethical')">Enroll Now</button>
     </div>
-
-    <div class="card">
-      
-      <h3>Penetration Testing</h3>
-      <p>How to exploit security vulnerabilities before hackers.</p>
-      <button class="btn" onclick="openPopup('social')">Comming Soon</button>
-    </div>
-
-    <div class="card">
-      
-      <h3>Networking Fundamentals</h3>
-      <p>Core networking concepts essential for cybersecurity.</p>
-      <button class="btn" onclick="openPopup('network')">Comming Soon</button>
-    </div>
-
   </div>
 </section>
 
@@ -211,7 +265,16 @@ footer a{color:var(--yellow);text-decoration:none;}
     <span class="close" onclick="closePopup()">×</span>
     <h2 id="title"></h2>
     <div id="content"></div>
-    <a class="btn" style="margin-top:25px;display:inline-block;">Register Now</a>
+
+    <!-- REGISTER BUTTON -->
+    <a 
+      id="registerBtn"
+      class="btn"
+      style="margin-top:25px;display:inline-block;"
+      target="_blank"
+    >
+      Register Now
+    </a>
   </div>
 </div>
 
@@ -227,54 +290,60 @@ footer a{color:var(--yellow);text-decoration:none;}
 <script>
 function openPopup(type){
   document.getElementById("popup").style.display="block";
-  let t=document.getElementById("title");
-  let c=document.getElementById("content");
+  let t = document.getElementById("title");
+  let c = document.getElementById("content");
+  let r = document.getElementById("registerBtn");
 
-  if(type==="ethical"){
-    t.innerText="Ethical Hacking – 3 Day Webinar";
-    c.innerHTML=`
-    <h4>Day 1 – Ethical Hacking Fundamentals</h4>
-    <ul>
-      <li>Ethical Hacking Basics & Hacker Types</li>
-      <li>Threat Landscape & Reconnaissance</li>
-      <li>Nmap Demo & OWASP ZAP</li>
-      <li>Password Attacks & Defense</li>
-    </ul>
-    <h4>Day 2 – Attacks, Threats & AI</h4>
-    <ul>
-      <li>Phishing, Malware, SQLi, XSS</li>
-      <li>AI-powered Hacking & Detection</li>
-      <li>Future: AI vs AI Security</li>
-    </ul>
-    <h4>Day 3 – Legal, Career & Real World</h4>
-    <ul>
-      <li>Cyber Laws & Ethical Boundaries</li>
-      <li>End-to-End Security Testing</li>
-      <li>Career Paths & Certifications</li>
-      <li>Bug Bounty & Certificate</li>
-    </ul>`;
-  }
+  if(type === "ethical"){
+    t.innerText = "Ethical Hacking – 3 Day Webinar";
+    c.innerHTML = `
+      <h4>Day 1 – Foundations of Ethical Hacking</h4>
+      <ul>
+        <li>Welcome & Introduction</li>
+        <li>What is Ethical Hacking ?</li>
+        <li>Why Ethical Hacking Matters in 2025</li>
+        <li>Types of Hackers</li>
+        <li>Hacking vs Ethical Hacking</li>
+        <li>Ethical Hacker Mindset</li>
+        <li>Introduction to Cyber Threat Landscape</li>
+        <li>Reconnaissance Basics</li>
+        <li>Nmap Live Demonstration</li>
+        <li>Vulnerability Scanning</li>
+        <li>Password Attacks Overview</li>
+        <li>Basic Defensive Techniques</li>
+      </ul>
 
-  if(type==="social"){
-    t.innerText="Penetration Testing";
-    c.innerHTML=`
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>`;
-  }
+      <h4>Day 2 – Ethical Hacking Attacks & AI</h4>
+      <ul>
+        <li>Common Cyber Threats Overview</li>
+        <li>Phishing Attacks</li>
+        <li>Malware & Ransomware Concepts</li>
+        <li>SQL Injection Basics</li>
+        <li>Cross-Site Scripting (XSS)</li>
+        <li>Password Attack Techniques</li>
+        <li>Introduction to AI in Cybersecurity</li>
+        <li>AI-Powered Ethical Hacking Tools</li>
+        <li>AI-Driven Threat Detection Demo</li>
+        <li>Risks of AI in Hacking</li>
+        <li>Future Trends: AI vs AI Security</li>
+      </ul>
 
-  if(type==="network"){
-    t.innerText="Networking Fundamentals ";
-    c.innerHTML=`
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>`;
+      <h4>Day 3 – Career Roadmap & Real Skills</h4>
+      <ul>
+        <li>Legal & Ethical Boundaries of Hacking</li>
+        <li>Cyber Laws in India & Globally</li>
+        <li>Understanding Vulnerability Reports</li>
+        <li>Security Risk & Impact Analysis</li>
+        <li>Cybersecurity Career Paths</li>
+        <li>Certifications Roadmap</li>
+        <li>Bug Bounty Programs Overview</li>
+        <li>Resources for Learning Ethical Hacking</li>
+        <li>Certificate & Next Steps</li>
+      </ul>
+    `;
+
+    /* REGISTER LINK */
+    r.href = "https://forms.gle/vC1SNYZX6msZ6bBF8";
   }
 }
 
