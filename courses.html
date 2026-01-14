@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GA Cyber Tutor | Cybersecurity Trainings</title>
+<title>GA Cyber Tutor | 10-Day Cybersecurity Training</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -35,7 +35,6 @@ body{
   margin:auto;
 }
 
-/* NAV */
 nav{
   padding:20px 0;
   border-bottom:1px solid #1e293b;
@@ -61,37 +60,34 @@ nav{
   border:none;
 }
 
-/* HEADER */
 .header{
   text-align:center;
-  padding:80px 0;
+  padding:90px 0;
   background:linear-gradient(135deg,#020617,#0b1120);
 }
 .header h1{
-  font-size:38px;
+  font-size:40px;
 }
 .header h1 span{color:var(--yellow);}
 .header p{
-  max-width:650px;
-  margin:15px auto 0;
+  max-width:750px;
+  margin:18px auto 0;
   color:var(--muted);
+  font-size:17px;
 }
 
-/* GRID */
 section{padding:80px 0;}
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:30px;
 }
+
 .card{
   background:var(--card);
   border:1px solid #1e293b;
   border-radius:16px;
   padding:35px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
   transition:.3s;
 }
 .card:hover{
@@ -101,7 +97,6 @@ section{padding:80px 0;}
 .card h3{color:var(--yellow);}
 .card p{color:var(--muted);margin:15px 0;}
 
-/* POPUP */
 #popup{display:none;}
 .popup-overlay{
   position:fixed;
@@ -115,18 +110,18 @@ section{padding:80px 0;}
   left:50%;
   transform:translate(-50%,-50%);
   background:var(--card);
-  width:90%;
-  max-width:900px;
+  width:95%;
+  max-width:950px;
   max-height:85vh;
   overflow-y:auto;
-  padding:35px;
+  padding:40px;
   border-radius:16px;
   border:1px solid #1e293b;
   z-index:1001;
 }
 .popup-box h2{color:var(--yellow);}
 .popup-box h4{
-  margin-top:25px;
+  margin-top:28px;
   color:#fde047;
 }
 .popup-box ul{
@@ -143,7 +138,6 @@ section{padding:80px 0;}
   cursor:pointer;
 }
 
-/* FOOTER */
 footer{
   border-top:1px solid #1e293b;
   padding:30px 0;
@@ -166,92 +160,96 @@ footer a{color:var(--yellow);text-decoration:none;}
 
 <div class="header">
   <h1><span>10-Day</span> Practical Cybersecurity Training</h1>
-  <p>Beginner-friendly, hands-on training focused on real-world cyber attacks & defense.</p>
+  <p>Beginner to real-world cybersecurity skills with live demos, hands-on labs, mini project & elite recognition.</p>
 </div>
 
 <section>
   <div class="container grid">
     <div class="card">
       <h3>10-Day Practical Cybersecurity Training</h3>
-      <p>Live demos, attack simulations, labs, mini project & elite performance recognition.</p>
-      <button class="btn" onclick="openPopup('cyber10')">View Details</button>
+      <p>₹499 only · Live / Recorded · Certificate + Special Recognition</p>
+      <button class="btn" onclick="openPopup()">View Full Details</button>
     </div>
   </div>
 </section>
 
-<!-- POPUP -->
 <div id="popup">
   <div class="popup-overlay" onclick="closePopup()"></div>
   <div class="popup-box">
     <span class="close" onclick="closePopup()">×</span>
-    <h2 id="title"></h2>
-    <div id="content"></div>
+
+    <h2>10-Day Practical Cybersecurity Training</h2>
+
+    <h4>📌 Course Details</h4>
+    <ul>
+      <li>🗓 Duration: 10 Days</li>
+      <li>⏱ Daily: 1–1.5 Hours</li>
+      <li>📍 Mode: Live Online + Recorded Access</li>
+      <li>💰 Fee: ₹499 Only</li>
+      <li>🎓 Certificate Included</li>
+      <li>👨‍🎓 Beginner Friendly – No prior experience needed</li>
+    </ul>
+
+    <h4>🧠 Day-Wise Syllabus</h4>
+    <ul>
+      <li><b>Day 1:</b> Cybersecurity basics, hacker mindset, attack flow</li>
+      <li><b>Day 2:</b> Linux fundamentals & Kali Linux hands-on</li>
+      <li><b>Day 3:</b> Networking concepts, IP, DNS, HTTP/HTTPS</li>
+      <li><b>Day 4:</b> Reconnaissance & OSINT techniques</li>
+      <li><b>Day 5:</b> Vulnerability scanning & reports</li>
+      <li><b>Day 6:</b> Web attacks – XSS & SQL Injection demos</li>
+      <li><b>Day 7:</b> Password & system attack concepts</li>
+      <li><b>Day 8:</b> Security & defense best practices</li>
+      <li><b>Day 9:</b> Mini project & practice lab challenge</li>
+      <li><b>Day 10:</b> Career roadmap & certification</li>
+    </ul>
+
+    <h4>🎁 What You Get</h4>
+    <ul>
+      <li>Certificate of Practical Training</li>
+      <li>Free Cybersecurity Starter eBook</li>
+      <li>Recorded session access</li>
+      <li>Practice labs & tools list</li>
+      <li>Discount on advanced programs</li>
+    </ul>
+
+    <h4>🏆 Special Elite Recognition</h4>
+    <ul>
+      <li>Elite Performance Certificate for top 3 performers</li>
+      <li>Permanent recognition on company website</li>
+    </ul>
+
+    <h4>👨‍🏫 Trainer</h4>
+    <ul>
+      <li>G. Aravind – Certified Ethical Hacker</li>
+      <li>Penetration Tester & Security Analyst</li>
+      <li>Reported bugs in Instagram, Nokia, Flipkart, ShopClues</li>
+    </ul>
 
     <a 
-      id="registerBtn"
       class="btn"
-      style="margin-top:25px;display:inline-block;"
+      style="margin-top:30px;display:inline-block;"
+      href="https://forms.gle/YOUR_NEW_FORM_LINK"
       target="_blank"
     >
-      Register Now
+      Register Now – ₹499
     </a>
   </div>
 </div>
 
 <footer>
   <p>
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="privacy-policy.html">Terms of Use</a> |
-    <a href="privacy-policy.html">Refund Policy</a>
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms</a> |
+    <a href="#">Refund Policy</a>
   </p>
-  <p style="margin-top:10px;">© 2025 GA Cyber Tutor - A GA Tech Innovators Company</p>
+  <p style="margin-top:10px;">© 2025 GA Cyber Tutor · A GA Tech Innovators Company</p>
 </footer>
 
 <script>
-function openPopup(type){
+function openPopup(){
   document.getElementById("popup").style.display="block";
-  let t = document.getElementById("title");
-  let c = document.getElementById("content");
-  let r = document.getElementById("registerBtn");
-
-  if(type === "cyber10"){
-    t.innerText = "10-Day Practical Cybersecurity Training";
-    c.innerHTML = `
-      <h4>Day 1 – Cybersecurity Foundations</h4>
-      <ul><li>Hacker mindset, attack flow, career overview</li></ul>
-
-      <h4>Day 2 – Linux for Cybersecurity</h4>
-      <ul><li>Linux basics, Kali Linux, hands-on commands</li></ul>
-
-      <h4>Day 3 – Networking Fundamentals</h4>
-      <ul><li>IP, DNS, HTTP/HTTPS, network scanning demo</li></ul>
-
-      <h4>Day 4 – Reconnaissance & OSINT</h4>
-      <ul><li>Information gathering, Google hacking</li></ul>
-
-      <h4>Day 5 – Vulnerability Scanning</h4>
-      <ul><li>Website & system vulnerability identification</li></ul>
-
-      <h4>Day 6 – Web Application Attacks</h4>
-      <ul><li>XSS & SQL Injection practical demos</li></ul>
-
-      <h4>Day 7 – Password & System Attacks</h4>
-      <ul><li>Password cracking concepts & defenses</li></ul>
-
-      <h4>Day 8 – Security & Defense</h4>
-      <ul><li>Best practices, protection techniques</li></ul>
-
-      <h4>Day 9 – Mini Project & Lab Challenge</h4>
-      <ul><li>Hands-on lab + Elite Performer selection</li></ul>
-
-      <h4>Day 10 – Career Roadmap & Certification</h4>
-      <ul><li>Internships, bug bounty, certificates</li></ul>
-    `;
-
-    r.href = "https://forms.gle/SfNQXbhGhFbkZF4r9";
-  }
 }
-
 function closePopup(){
   document.getElementById("popup").style.display="none";
 }
@@ -259,4 +257,3 @@ function closePopup(){
 
 </body>
 </html>
-
