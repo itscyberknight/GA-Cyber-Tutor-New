@@ -152,85 +152,6 @@ footer{
   font-size:14px;
 }
 footer a{color:var(--yellow);text-decoration:none;}
-/* =========================
-   FULL RESPONSIVE ENHANCEMENTS
-   (No existing code modified)
-   ========================= */
-
-/* Prevent horizontal overflow on small devices */
-html, body {
-  overflow-x: hidden;
-}
-
-/* Make buttons and text easier to tap on mobile */
-@media (max-width: 600px) {
-  .btn {
-    padding: 14px 28px;
-    font-size: 16px;
-  }
-}
-
-/* Navigation responsiveness */
-@media (max-width: 768px) {
-  .nav-flex {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .logo {
-    font-size: 22px;
-  }
-}
-
-/* Hero section spacing and text scaling */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    padding: 0 10px;
-  }
-}
-
-/* Tablet adjustments */
-@media (max-width: 1024px) {
-  section {
-    padding: 70px 0;
-  }
-
-  .container {
-    width: 92%;
-  }
-}
-
-/* Mobile-first layout tightening */
-@media (max-width: 480px) {
-  section {
-    padding: 50px 0;
-  }
-
-  h2 {
-    font-size: 26px;
-  }
-
-  p {
-    font-size: 15px;
-  }
-
-  footer p {
-    font-size: 13px;
-    padding: 0 10px;
-  }
-}
-
-/* Grid stability on very small screens */
-@media (max-width: 360px) {
-  .about-grid,
-  .products-grid {
-    gap: 20px;
-  }
-}
 </style>
 </head>
 
@@ -244,16 +165,16 @@ html, body {
 </nav>
 
 <div class="header">
-  <h1>Live <span>Cybersecurity Trainings</span></h1>
-  <p>Industry-focused sessions designed to make you job-ready.</p>
+  <h1><span>10-Day</span> Practical Cybersecurity Training</h1>
+  <p>Beginner-friendly, hands-on training focused on real-world cyber attacks & defense.</p>
 </div>
 
 <section>
   <div class="container grid">
     <div class="card">
-      <h3>3 Day Live Ethical Hacking</h3>
-      <p>Hands-on hacking, attacks, AI security, legal & career roadmap.</p>
-      <button class="btn" onclick="openPopup('ethical')">Enroll Now</button>
+      <h3>10-Day Practical Cybersecurity Training</h3>
+      <p>Live demos, attack simulations, labs, mini project & elite performance recognition.</p>
+      <button class="btn" onclick="openPopup('cyber10')">View Details</button>
     </div>
   </div>
 </section>
@@ -266,7 +187,6 @@ html, body {
     <h2 id="title"></h2>
     <div id="content"></div>
 
-    <!-- REGISTER BUTTON -->
     <a 
       id="registerBtn"
       class="btn"
@@ -294,56 +214,41 @@ function openPopup(type){
   let c = document.getElementById("content");
   let r = document.getElementById("registerBtn");
 
-  if(type === "ethical"){
-    t.innerText = "Ethical Hacking – 3 Day Webinar";
+  if(type === "cyber10"){
+    t.innerText = "10-Day Practical Cybersecurity Training";
     c.innerHTML = `
-      <h4>Day 1 – Foundations of Ethical Hacking</h4>
-      <ul>
-        <li>Welcome & Introduction</li>
-        <li>What is Ethical Hacking ?</li>
-        <li>Why Ethical Hacking Matters in 2025</li>
-        <li>Types of Hackers</li>
-        <li>Hacking vs Ethical Hacking</li>
-        <li>Ethical Hacker Mindset</li>
-        <li>Introduction to Cyber Threat Landscape</li>
-        <li>Reconnaissance Basics</li>
-        <li>Nmap Live Demonstration</li>
-        <li>Vulnerability Scanning</li>
-        <li>Password Attacks Overview</li>
-        <li>Basic Defensive Techniques</li>
-      </ul>
+      <h4>Day 1 – Cybersecurity Foundations</h4>
+      <ul><li>Hacker mindset, attack flow, career overview</li></ul>
 
-      <h4>Day 2 – Ethical Hacking Attacks & AI</h4>
-      <ul>
-        <li>Common Cyber Threats Overview</li>
-        <li>Phishing Attacks</li>
-        <li>Malware & Ransomware Concepts</li>
-        <li>SQL Injection Basics</li>
-        <li>Cross-Site Scripting (XSS)</li>
-        <li>Password Attack Techniques</li>
-        <li>Introduction to AI in Cybersecurity</li>
-        <li>AI-Powered Ethical Hacking Tools</li>
-        <li>AI-Driven Threat Detection Demo</li>
-        <li>Risks of AI in Hacking</li>
-        <li>Future Trends: AI vs AI Security</li>
-      </ul>
+      <h4>Day 2 – Linux for Cybersecurity</h4>
+      <ul><li>Linux basics, Kali Linux, hands-on commands</li></ul>
 
-      <h4>Day 3 – Career Roadmap & Real Skills</h4>
-      <ul>
-        <li>Legal & Ethical Boundaries of Hacking</li>
-        <li>Cyber Laws in India & Globally</li>
-        <li>Understanding Vulnerability Reports</li>
-        <li>Security Risk & Impact Analysis</li>
-        <li>Cybersecurity Career Paths</li>
-        <li>Certifications Roadmap</li>
-        <li>Bug Bounty Programs Overview</li>
-        <li>Resources for Learning Ethical Hacking</li>
-        <li>Certificate & Next Steps</li>
-      </ul>
+      <h4>Day 3 – Networking Fundamentals</h4>
+      <ul><li>IP, DNS, HTTP/HTTPS, network scanning demo</li></ul>
+
+      <h4>Day 4 – Reconnaissance & OSINT</h4>
+      <ul><li>Information gathering, Google hacking</li></ul>
+
+      <h4>Day 5 – Vulnerability Scanning</h4>
+      <ul><li>Website & system vulnerability identification</li></ul>
+
+      <h4>Day 6 – Web Application Attacks</h4>
+      <ul><li>XSS & SQL Injection practical demos</li></ul>
+
+      <h4>Day 7 – Password & System Attacks</h4>
+      <ul><li>Password cracking concepts & defenses</li></ul>
+
+      <h4>Day 8 – Security & Defense</h4>
+      <ul><li>Best practices, protection techniques</li></ul>
+
+      <h4>Day 9 – Mini Project & Lab Challenge</h4>
+      <ul><li>Hands-on lab + Elite Performer selection</li></ul>
+
+      <h4>Day 10 – Career Roadmap & Certification</h4>
+      <ul><li>Internships, bug bounty, certificates</li></ul>
     `;
 
-    /* REGISTER LINK */
-    r.href = "https://forms.gle/vC1SNYZX6msZ6bBF8";
+    r.href = "https://forms.gle/YOUR_NEW_FORM_LINK";
   }
 }
 
@@ -354,4 +259,3 @@ function closePopup(){
 
 </body>
 </html>
-
